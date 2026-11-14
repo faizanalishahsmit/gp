@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b0e17;
+    color: #f4f1ea;
+    font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Rajdhani', 'Bahnschrift', 'Oswald', 'Arial Narrow', 'Segoe UI', sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', 'SFMono-Regular', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-panel {
+  background: rgba(14, 18, 28, 0.76);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 244, 224, 0.14);
+  box-shadow: 0 12px 32px rgba(5, 7, 15, 0.55);
+}
+
+.hud-panel-amber {
+  background: rgba(24, 18, 16, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 138, 61, 0.38);
+  box-shadow: 0 0 24px rgba(255, 107, 43, 0.18);
+}
+
+.hud-clip {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
